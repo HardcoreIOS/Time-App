@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oJl-xX-rNi">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="bariol_regular-webfont.ttf">
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+            <string>Bariol-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Wv5-gO-bAZ">
+            <objects>
+                <viewController id="oJl-xX-rNi" customClass="ViewController" customModule="Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iye-g4-szK"/>
+                        <viewControllerLayoutGuide type="bottom" id="naO-GE-AKN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oyw-bQ-jCt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Khn-LL-Yyx">
+                                <rect key="frame" x="263" y="20" width="75" height="65"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stopwatch" translatesAutoresizingMaskIntoConstraints="NO" id="IOj-ff-5hJ">
+                                        <rect key="frame" x="20" y="0.0" width="35" height="37"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stopwatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpY-4Y-62C">
+                                        <rect key="frame" x="1" y="47" width="75" height="18"/>
+                                        <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="54f-bV-UIL"/>
+                                    <constraint firstAttribute="height" constant="65" id="fz7-Uh-tY9"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="51" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-JA-PA8">
+                                <rect key="frame" x="0.0" y="324" width="600" height="276"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQV-LF-9gD">
+                                <rect key="frame" x="112" y="121" width="377" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="V1h-W0-dh0"/>
+                                    <constraint firstAttribute="width" constant="377" id="bX4-sO-JyY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="70"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="iOh-JS-kDi">
+                                <rect key="frame" x="203" y="218" width="195" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uuH-H2-3fn">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="7CG-qt-q0A"/>
+                                            <constraint firstAttribute="width" constant="80" id="vrs-di-Xju"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="23"/>
+                                        <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startStopPressed:" destination="oJl-xX-rNi" eventType="touchUpInside" id="wA3-Kw-6cZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4E-lf-9BT">
+                                        <rect key="frame" x="115" y="0.0" width="80" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="Bariol-Regular" family="Bariol" pointSize="23"/>
+                                        <state key="normal" title="Lap"/>
+                                        <connections>
+                                            <action selector="lapResetPressed:" destination="oJl-xX-rNi" eventType="touchUpInside" id="zf7-kv-yav"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="LfB-Aw-woQ"/>
+                                    <constraint firstAttribute="height" constant="80" id="Uou-Ga-6bX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4392156862745098" green="0.74117647058823533" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="iOh-JS-kDi" firstAttribute="centerX" secondItem="oyw-bQ-jCt" secondAttribute="centerX" id="3Oc-gl-aqU"/>
+                            <constraint firstItem="KQV-LF-9gD" firstAttribute="centerX" secondItem="oyw-bQ-jCt" secondAttribute="centerX" id="Ez9-Fk-pPU"/>
+                            <constraint firstItem="iOh-JS-kDi" firstAttribute="top" secondItem="KQV-LF-9gD" secondAttribute="bottom" constant="25" id="IYa-sd-2oI"/>
+                            <constraint firstItem="KQV-LF-9gD" firstAttribute="top" secondItem="Khn-LL-Yyx" secondAttribute="bottom" constant="36" id="Ilw-Og-cgX"/>
+                            <constraint firstItem="zzc-JA-PA8" firstAttribute="leading" secondItem="oyw-bQ-jCt" secondAttribute="leading" id="Pxb-XN-wZR"/>
+                            <constraint firstItem="zzc-JA-PA8" firstAttribute="top" secondItem="iOh-JS-kDi" secondAttribute="bottom" constant="26" id="QmU-4F-9V8"/>
+                            <constraint firstItem="Khn-LL-Yyx" firstAttribute="centerX" secondItem="oyw-bQ-jCt" secondAttribute="centerX" id="Wfd-5C-UHB"/>
+                            <constraint firstAttribute="trailing" secondItem="zzc-JA-PA8" secondAttribute="trailing" id="XWf-53-8H2"/>
+                            <constraint firstItem="Khn-LL-Yyx" firstAttribute="top" secondItem="iye-g4-szK" secondAttribute="bottom" id="bAk-L9-UeE"/>
+                            <constraint firstItem="naO-GE-AKN" firstAttribute="top" secondItem="zzc-JA-PA8" secondAttribute="bottom" id="e1G-sX-RwX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lapResetButton" destination="B4E-lf-9BT" id="6zP-YN-nga"/>
+                        <outlet property="lapsTableView" destination="zzc-JA-PA8" id="u7E-2t-arT"/>
+                        <outlet property="startStopButton" destination="uuH-H2-3fn" id="RCL-Gl-Kwm"/>
+                        <outlet property="stopwatchLabel" destination="KQV-LF-9gD" id="sDi-Jv-OK4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bcf-ug-xd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="562"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Stopwatch" width="35" height="37"/>
+    </resources>
+</document>
