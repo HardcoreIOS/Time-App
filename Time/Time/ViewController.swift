@@ -30,6 +30,7 @@ class ViewController: UIViewController {
 		if startStopWatch == true {
 			
 			timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(updateStopWatch), userInfo: nil, repeats: true)
+            NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
 			startStopWatch = false
 			
 			startStopButton.setTitleColor(UIColor(hex: 0xFF5A5A), forState: .Normal)
